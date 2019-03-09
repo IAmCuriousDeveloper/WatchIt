@@ -61,8 +61,11 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "api": "node ratingsAPI.js"
+    "api": "node ratingsAPI.js",
+    "build":"webpack --watch",
+    "dev":"webpack-dev-server"  
   },
+  
   "repository": {
     "type": "git",
     "url": "git+https://github.com/PRASHANTPR7/WatchIt.git"
