@@ -1,19 +1,17 @@
 import React from 'react'
 import preload from '../data.json' 
+import Showcard from './ShowCard'
 
 const Search = () => (
     <div className='search'>
+    <div>
     {preload.shows.map((show)=>( 
-            <div className="show-card">
-            <img src={`/public/img/posters/${show.poster}`} alt={`${show.title} show poster`}/>
-            <div>
-            <h3>{show.title}</h3>
-            <h4>({show.year})</h4>
-            <p>{show.description}</p>
-            </div>
-            </div>
+    <Showcard key ={show.imdbID} {...show}/>//using spread operator
     ))}
+    </div>
     </div>
         
 )
+
+//we can use props-types here to check for run time errors but prop-types are mostly used for the summery of a component that that this component required and spitting out on the window
 export default Search;
