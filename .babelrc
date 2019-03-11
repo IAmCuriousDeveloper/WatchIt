@@ -8,5 +8,7 @@
             "loose":true, //adding smaller bit of code and ignoring the edge case of es6,
             "modules":false,
         }]   
-        ]
+        ],
+        "plugins": ["babel-plugin-transform-class-properties"]
+        //with this plugin we dont have to write constructor inside class synatx
 }
