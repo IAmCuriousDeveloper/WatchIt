@@ -1,6 +1,7 @@
 {
     "presets":[
         "react",
+        "@babel/preset-env", "@babel/preset-react",
         ["env",{
             "targets":{
                 "browsers":"last 2 versions"
@@ -11,4 +12,13 @@
         ],
         "plugins": ["babel-plugin-transform-class-properties"]
         //with this plugin we dont have to write constructor inside class synatx
-}
+        ,
+        //run this plugin in the test enviroment only
+        "env":{
+            "test":{
+                "plugins":[
+                    "babel-plugin-transform-es2015-modules-commonjs"
+                ]
+            }
+        }
+    }
