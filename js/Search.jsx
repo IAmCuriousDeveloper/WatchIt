@@ -1,5 +1,4 @@
 import React from 'react'
-import preload from '../data.json' 
 import Showcard from './ShowCard'
 
 class Search extends React.Component{
@@ -13,12 +12,13 @@ class Search extends React.Component{
     render(){
         return (
             <div className='search'>
+            {console.log(props)}
             <header>
                 <h1>WatchIt</h1>
                 <input value={this.state.SearchTerm} onChange={this.handleSearchTerm} type="text" placeholder="Search here"/>
             </header>
             <div>
-                    {preload.shows
+                    {props.shows
                     .filter(show => `${show.title} ${show.description}`.toUpperCase().indexOf(this.state.SearchTerm.toUpperCase()) >=0)
                     .map((show)=>( 
                     <Showcard key ={show.imdbID} {...show}/>//using spread operator
@@ -28,6 +28,7 @@ class Search extends React.Component{
         
     )
     }
+    
 }
 
 //we can use props-types here to check for run time errors but prop-types are mostly used for the summery of a component that that this component required and spitting out on the window
