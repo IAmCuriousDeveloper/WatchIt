@@ -9,7 +9,7 @@ module.exports = {
         filename:'bundle.js'
     },
     resolve:{
-        extensions:['.js','.jsx','.json']
+        extensions:['.js','.jsx','.json'] //what to resolve preference are in order
     },
     stats:{
         colors:true,
