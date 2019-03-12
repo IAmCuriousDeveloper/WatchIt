@@ -9,6 +9,7 @@
     "compression": "^1.7.3",
     "cors": "2.8.3",
     "express": "^4.16.4",
+    "flow-typed": "^2.5.1",
     "lodash": "^4.17.11",
     "preact": "8.1.0",
     "preact-compat": "3.16.0",
