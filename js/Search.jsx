@@ -1,5 +1,6 @@
 import React from 'react'
 import Showcard from './ShowCard'
+import Header from './Header';
 
 class Search extends React.Component{
     state={

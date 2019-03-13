@@ -1,12 +1,11 @@
 import React from "react";
+import Header from "./Header";
 
 const Details = (props)=>{
     const {title,description,trailer,poster,year,imdbID} = props.show;
     return (
         <div className="details">
-        <header>
-            <h1>WatchIT</h1>
-        </header>
+        <Header/>
         <section>
             <h1>{title}</h1>
             <h2>({year})</h2>
