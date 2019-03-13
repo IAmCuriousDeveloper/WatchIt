@@ -11,11 +11,8 @@ const App = () =>{
             <div className="app">
             <Switch>
             <Route  exact path='/'component={Landing}/>
-            <Route  exact path='/search'component={ ()=> (<Search shows= {preload} {...props}/>)}/>
-            <Route  path='/details/:id' component={(props) => {
-                const selectedShow = preload.shows.find((show)=>show.imdbID === props.match.params.id);
-                return <Details show={selectedShow} {...props}/>
-            }}/>
+            <Route  exact path='/search'component={ (props)=> (<Search shows= {preload.shows} {...props}/>)}/>
+            <Route path="/details/:id" component={(props)=><Details {...props} show ={preload.shows.find(show => show.imdbID === props.match.params.id)} />}/>
             <Route  render= {()=>(<h1>404 page not found</h1>)}/>
             </Switch>
             </div>

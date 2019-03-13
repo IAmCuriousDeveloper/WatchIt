@@ -12,13 +12,12 @@ class Search extends React.Component{
     render(){
         return (
             <div className='search'>
-            {console.log(props)}
             <header>
                 <h1>WatchIt</h1>
                 <input value={this.state.SearchTerm} onChange={this.handleSearchTerm} type="text" placeholder="Search here"/>
             </header>
             <div>
-                    {props.shows
+                    {this.props.shows
                     .filter(show => `${show.title} ${show.description}`.toUpperCase().indexOf(this.state.SearchTerm.toUpperCase()) >=0)
                     .map((show)=>( 
                     <Showcard key ={show.imdbID} {...show}/>//using spread operator
