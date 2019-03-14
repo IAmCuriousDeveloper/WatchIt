@@ -13,10 +13,7 @@ class Search extends React.Component{
     render(){
         return (
             <div className='search'>
-            <header>
-                <h1>WatchIt</h1>
-                <input value={this.state.SearchTerm} onChange={this.handleSearchTerm} type="text" placeholder="Search here"/>
-            </header>
+           <Header handleSearchTerm={this.handleSearchTerm} showSearch SearchTerm={this.state.SearchTerm}/>
             <div>
                     {this.props.shows
                     .filter(show => `${show.title} ${show.description}`.toUpperCase().indexOf(this.state.SearchTerm.toUpperCase()) >=0)
