@@ -4,7 +4,7 @@ const Header = props => {
   let utilSpace;
   if (props.showSearch) {
     utilSpace = (
-      <input type="text" placeholder="Search" value={props.searchTerm} onChange={props.handleSearchTermChange} />
+      <input type="text" placeholder="Search" value={props.searchTerm} onChange={props.handleSearchTerm} />
     );
   } else {
     utilSpace = (

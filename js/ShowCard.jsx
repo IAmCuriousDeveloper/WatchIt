@@ -1,13 +1,17 @@
 import React from 'react'
 import styled from 'styled-components'
+import { Link } from "react-router-dom";
 
-const Wrapper = styled.div`
+//we have make wrapper a link type and do all the to={'deails/imdbID} magic in that
+const Wrapper = styled(Link)`
 width:32%;
 border:2px solid black;
 border-radius : 20px;
 margin-bottom:25px;
 padding-right:10px;
 overflow:hidden;
+text-decoration:none;
+color:black;
 `;
 
 const Image = styled.img`
@@ -21,7 +25,7 @@ margin:right:10px;
 //but its not inline coz inline is ineffiecinet what it will do eventually it creates a style tag with these css properties and give wrapper a class of that properties 
 
 const ShowCard = (props) => (
-        <Wrapper>
+        <Wrapper to={`details/${props.imdbID}`}>
         <Image src={`/public/img/posters/${props.poster}`} alt={`${props.title} poster`}/>
         <div>
         <h3>{props.title}</h3>
